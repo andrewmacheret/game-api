@@ -1,0 +1,18 @@
+sudo: required
+
+language: node_js
+
+node_js:
+  - '6'
+
+install:
+  # install dependencies
+  - set -e
+  - npm install
+  - pip install --user awscli
+  - openssl aes-256-cbc -K $encrypted_606f298a9a59_key -iv $encrypted_606f298a9a59_iv -in .env.enc -out .env -d
+
+script:
+  # build and test
+  - set -e
+  - ./build-and-upload.sh
