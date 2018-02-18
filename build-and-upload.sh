@@ -6,9 +6,7 @@ source .env
 
 # basic test ...
 
-node index.js
-
-node test-chess-san-parser.js
+node test
 
 # upload to aws lambda ...
 

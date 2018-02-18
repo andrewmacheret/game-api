@@ -3,7 +3,7 @@
 const AWS = require('aws-sdk')
 const uuidv1 = require('uuid/v1')
 const uuidValidate = require('uuid-validate')
-const ChessSanParser = require('./chess-san-parser')
+const ChessSanParser = require('./chess/chess-san-parser')
 
 class BadRequestError extends Error {
   constructor(str) {
